@@ -8,10 +8,12 @@ with socket(AF_INET, SOCK_STREAM) as s:
     s.bind((HOST, PORT))
     s.listen()
 
+    
     while True:
+        conn, addr = s.accept()
         data = conn.recv(1024)
         if data: 
-            print("@kimmustcode: " + str(data.decode('utf-8')))
+            print(addr + ": " + str(data.decode('utf-8')))
         if not data: 
             break 
 
