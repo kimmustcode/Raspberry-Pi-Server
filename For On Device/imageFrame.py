@@ -9,7 +9,6 @@ import time
 if os.environ.get('DISPLAY', '') == '':
     os.environ.__setitem__('DISPLAY', ':0.0')
 
-
 class dURLImage:
     def __init__(self, url):
 
@@ -66,7 +65,5 @@ class imageDisplay:
 
     def closeWindow(self):
         self.root.quit()
-
-
 
 imageDisplay('https://static1.e621.net/data/30/e4/30e4864022b28369c8adb4e9c7924a4d.png')
